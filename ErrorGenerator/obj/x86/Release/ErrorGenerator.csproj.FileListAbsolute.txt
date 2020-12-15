@@ -1,0 +1,9 @@
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\bin\x86\Release\ErGen.exe.config
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\bin\x86\Release\ErGen.exe
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\bin\x86\Release\ErGen.pdb
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErrorGenerator.Form1.resources
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErrorGenerator.Properties.Resources.resources
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErrorGenerator.csproj.GenerateResource.cache
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErrorGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErGen.exe
+C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\x86\Release\ErGen.pdb
