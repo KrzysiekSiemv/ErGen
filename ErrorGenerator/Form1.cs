@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Drawing;
+using System.Threading;
 namespace ErrorGenerator
 {
     public partial class Form1 : Form
@@ -12,7 +13,13 @@ namespace ErrorGenerator
 
         private void generate_Click(object sender, EventArgs e)
         {
-            showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+            if (numericUpDown1.Value != 0)
+            {
+                Thread.Sleep(Convert.ToInt32(numericUpDown1.Value * 1000));
+                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+            }
+            else
+                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
         }
 
         void showMessage(string title, string text, int buttons, int types)
@@ -56,6 +63,38 @@ namespace ErrorGenerator
         {
             linkLabel1.LinkVisited = true;
             System.Diagnostics.Process.Start("https://github.com/KrzysiekSiemv");
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings settings = new Properties.Settings();
+            if(settings.Ikona != "")
+                notifyIcon1.Icon = new Icon(settings.Ikona);
+
+            notifyIcon1.Text = settings.TytulIkony;
+
+            if (checkBox1.Checked)
+                notifyIcon1.Visible = true;
+            else
+                notifyIcon1.Visible = false;
+        }
+
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            if(Properties.Settings.Default.Klikniecie == 1)
+                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Klikniecie == 0)
+                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UstawieniaNotify ustawienia = new UstawieniaNotify();
+            ustawienia.Show();
         }
     }
 }

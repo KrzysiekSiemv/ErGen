@@ -22,5 +22,41 @@ namespace ErrorGenerator.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Ikona {
+            get {
+                return ((string)(this["Ikona"]));
+            }
+            set {
+                this["Ikona"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Pokaż sztuczny błąd")]
+        public string TytulIkony {
+            get {
+                return ((string)(this["TytulIkony"]));
+            }
+            set {
+                this["TytulIkony"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Klikniecie {
+            get {
+                return ((int)(this["Klikniecie"]));
+            }
+            set {
+                this["Klikniecie"] = value;
+            }
+        }
     }
 }

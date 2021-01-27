@@ -8,3 +8,14 @@ C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\bin\Debug\ErGen.exe
 C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\bin\Debug\ErGen.pdb
 C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\Debug\ErGen.exe
 C:\Users\Krzysiek\source\repos\ErrorGenerator\ErrorGenerator\obj\Debug\ErGen.pdb
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\bin\Debug\ErGen.exe.config
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\bin\Debug\ErGen.exe
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\bin\Debug\ErGen.pdb
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.csprojAssemblyReference.cache
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.Form1.resources
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.Properties.Resources.resources
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.csproj.GenerateResource.cache
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErGen.exe
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErGen.pdb
+C:\Users\Krzysiek\Documents\GitHub\ErGen\ErrorGenerator\obj\Debug\ErrorGenerator.UstawieniaNotify.resources
