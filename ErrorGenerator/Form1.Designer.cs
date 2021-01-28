@@ -48,7 +48,6 @@ namespace ErrorGenerator
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +57,7 @@ namespace ErrorGenerator
             this.label1.Location = new System.Drawing.Point(17, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tytuł:";
             // 
@@ -77,7 +76,7 @@ namespace ErrorGenerator
             this.label2.Location = new System.Drawing.Point(17, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tekst:";
             // 
@@ -98,7 +97,7 @@ namespace ErrorGenerator
             this.label3.Location = new System.Drawing.Point(357, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Przyciski:";
             // 
@@ -125,7 +124,7 @@ namespace ErrorGenerator
             this.label4.Location = new System.Drawing.Point(357, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 17);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Typ błędu";
             // 
@@ -161,7 +160,7 @@ namespace ErrorGenerator
             this.label6.Location = new System.Drawing.Point(16, 309);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 17);
+            this.label6.Size = new System.Drawing.Size(196, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Stworzone przez KrzysiekSiemv";
             // 
@@ -171,7 +170,7 @@ namespace ErrorGenerator
             this.linkLabel1.Location = new System.Drawing.Point(233, 309);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(52, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(49, 16);
             this.linkLabel1.TabIndex = 12;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "GitHub";
@@ -182,7 +181,7 @@ namespace ErrorGenerator
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(359, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 17);
+            this.label5.Size = new System.Drawing.Size(141, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Opóżnienie (sekundy):";
             // 
@@ -203,7 +202,7 @@ namespace ErrorGenerator
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(359, 157);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 17);
+            this.label7.Size = new System.Drawing.Size(33, 16);
             this.label7.TabIndex = 15;
             this.label7.Text = "Inne";
             // 
@@ -212,7 +211,7 @@ namespace ErrorGenerator
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(361, 178);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(191, 55);
+            this.checkBox1.Size = new System.Drawing.Size(184, 52);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Pokaż błąd po wciśnięciu \r\nprzycisku na pasku \r\npowiadomień";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -235,22 +234,11 @@ namespace ErrorGenerator
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(428, 302);
-            this.progressBar1.Maximum = 100000;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 18;
-            this.progressBar1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 327);
-            this.Controls.Add(this.progressBar1);
+            this.ClientSize = new System.Drawing.Size(561, 335);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
@@ -302,7 +290,6 @@ namespace ErrorGenerator
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
