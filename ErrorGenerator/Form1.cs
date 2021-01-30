@@ -9,17 +9,24 @@ namespace ErrorGenerator
         public Form1()
         {
             InitializeComponent();
+            button2.Enabled = false;
         }
 
         private void generate_Click(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value != 0)
+            if (checkBox2.Checked)
+                timer1.Start();
+
+            Thread.Sleep(Convert.ToInt32(numericUpDown1.Value * 1000));
+            Repeat(Convert.ToInt32(numericUpDown2.Value), () => showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex));
+        }
+
+        public static void Repeat(int times, Action action)
+        {
+            for(int i = 0; i < times; i++)
             {
-                Thread.Sleep(Convert.ToInt32(numericUpDown1.Value * 1000));
-                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+                action();
             }
-            else
-                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
         }
 
         void showMessage(string title, string text, int buttons, int types)
@@ -56,6 +63,7 @@ namespace ErrorGenerator
                 type = MessageBoxIcon.Information;
             #endregion
 
+            Thread.Sleep(Convert.ToInt32(numericUpDown3.Value * 1000));
             MessageBox.Show(text, title, button, type);
         }
 
@@ -74,27 +82,66 @@ namespace ErrorGenerator
             notifyIcon1.Text = settings.TytulIkony;
 
             if (checkBox1.Checked)
+            {
                 notifyIcon1.Visible = true;
+                button2.Enabled = true;
+            }
             else
+            {
                 notifyIcon1.Visible = false;
+                button2.Enabled = false;
+            }
         }
 
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
-            if(Properties.Settings.Default.Klikniecie == 1)
-                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+            if (Properties.Settings.Default.Klikniecie == 1)
+            {
+                if (checkBox2.Checked)
+                    timer1.Start();
+
+                Repeat(Convert.ToInt32(numericUpDown2.Value), () => showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex));
+            }
         }
 
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.Klikniecie == 0)
-                showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+            {
+                if (checkBox2.Checked)
+                    timer1.Start();
+
+                Repeat(Convert.ToInt32(numericUpDown2.Value), () => showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex));
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             UstawieniaNotify ustawienia = new UstawieniaNotify();
             ustawienia.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e) { this.Visible = false; }
+        private void wyłaczToolStripMenuItem_Click(object sender, EventArgs e) { this.Close(); }
+        private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e) { this.Visible = true;  }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            showMessage(title.Text, text.Text, buttons.SelectedIndex, type.SelectedIndex);
+            timer1.Stop();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                numericUpDown2.Value = 1;
+                numericUpDown2.Enabled = false;
+            }
+            else
+            {
+                numericUpDown2.Enabled = true;
+            }
         }
     }
 }
